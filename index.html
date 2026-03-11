@@ -3,7 +3,7 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Think Clean</title>
+  <title>Servicios de Aseo Profesional</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="/_sdk/element_sdk.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
@@ -66,9 +66,43 @@
        <div>
        </div><img class="logo"  src="./assets/logo.svg" alt="">
       </div>
-      <div class="hidden md:flex items-center gap-8"><a href="#inicio" class="nav-link text-white/90 hover:text-white transition-colors">Inicio</a> <a href="#servicios" class="nav-link text-white/90 hover:text-white transition-colors">Servicios</a> <a href="#nosotros" class="nav-link text-white/90 hover:text-white transition-colors">Nosotros</a> <a href="#contacto" class="nav-link text-white/90 hover:text-white transition-colors">Contacto</a>
-      </div><button id="cta-nav" class="btn-primary text-white px-4 py-2 sm:px-6 sm:py-2.5 rounded-full font-semibold text-sm sm:text-base"> Cotizar Ahora </button>
-     </div>
+
+<!-- MENÚ DESKTOP -->
+<div class="hidden md:flex items-center gap-8">
+  <a href="#inicio" class="nav-link text-white/90 hover:text-white transition-colors">Inicio</a>
+  <a href="#servicios" class="nav-link text-white/90 hover:text-white transition-colors">Servicios</a>
+  <a href="#nosotros" class="nav-link text-white/90 hover:text-white transition-colors">Nosotros</a>
+  <a href="#contacto" class="nav-link text-white/90 hover:text-white transition-colors">Contacto</a>
+</div>
+
+<!-- BOTÓN COTIZAR DESKTOP -->
+<button id="cta-nav" class="hidden md:block btn-primary text-white px-4 py-2 sm:px-6 sm:py-2.5 rounded-full font-semibold text-sm sm:text-base">
+  <a href="chatbot.html">Cotizar Ahora</a>
+</button>
+
+<!-- BOTÓN MENÚ MÓVIL -->
+<button id="mobile-menu-btn" class="md:hidden text-white text-2xl">
+  ☰
+</button>
+
+</div>
+
+<!-- MENÚ MÓVIL -->
+<div id="mobile-menu" class="hidden md:hidden bg-black/90 backdrop-blur-lg w-full absolute top-16 left-0 p-6 space-y-6 text-center">
+
+  <a href="#inicio" class="block text-white text-lg">Inicio</a>
+
+  <a href="#servicios" class="block text-white text-lg">Servicios</a>
+
+  <a href="#nosotros" class="block text-white text-lg">Nosotros</a>
+
+  <a href="#contacto" class="block text-white text-lg">Contacto</a>
+
+  <a href="chatbot.html" class="block bg-[#64A0A0] text-white py-3 rounded-full font-semibold">
+    Cotizar Ahora
+  </a>
+
+</div>
     </div>
    </nav>
    <section id="inicio" class="min-h-screen flex items-center justify-center px-4 pt-20">
@@ -456,7 +490,15 @@
 function cerrarPopup(){
   document.getElementById("promoPopup").style.display = "none";
 }
+const mobileBtn = document.getElementById("mobile-menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+
+if (mobileBtn && mobileMenu) {
+  mobileBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+}
   </script>
  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dab4e6743aef7b8',t:'MTc3MzIzOTk0Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-
 </html>
+
