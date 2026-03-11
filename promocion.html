@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="es" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenida - Descuento Especial</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Poppins', sans-serif; }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes slideUp {
+      from { 
+        opacity: 0; 
+        transform: translateY(30px) scale(0.95);
+      }
+      to { 
+        opacity: 1; 
+        transform: translateY(0) scale(1);
+      }
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    @keyframes sparkle {
+      0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+      50% { opacity: 1; transform: scale(1) rotate(180deg); }
+    }
+    
+    .modal-backdrop {
+      animation: fadeIn 0.3s ease-out;
+    }
+    
+    .modal-content {
+      animation: slideUp 0.4s ease-out 0.1s both;
+    }
+    
+    .discount-badge {
+      animation: pulse 2s ease-in-out infinite;
+    }
+    
+    .sparkle {
+      animation: sparkle 1.5s ease-in-out infinite;
+    }
+    
+    .sparkle:nth-child(2) { animation-delay: 0.3s; }
+    .sparkle:nth-child(3) { animation-delay: 0.6s; }
+    .sparkle:nth-child(4) { animation-delay: 0.9s; }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full" style="background-color: #ffffff;">
+  <!-- Contenido de fondo -->
+  <div class="h-full flex items-center justify-center">
+   <div class="text-center text-gray-400">
+    <svg class="w-24 h-24 mx-auto mb-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+    </svg>
+    <p class="text-lg">Tu contenido principal aquí</p>
+   </div>
+  </div><!-- Modal de Bienvenida -->
+  <div id="modal-backdrop" class="modal-backdrop fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+   <div class="modal-content relative w-full max-w-sm">
+    <!-- Panel del Modal -->
+    <div class="relative overflow-hidden rounded-3xl bg-white p-8 shadow-2xl">
+     <!-- Espacio para el Logo -->
+     <div id="logo-space" class="flex justify-center mb-6">
+
+      <div class="w-24 h-24 rounded-full flex items-center justify-center border-2 border-dashed border-gray-300 bg-gray-50">
+        <img src="./assets/logo.svg" alt="">
+      </div>
+     </div><!-- Badge de descuento -->
+     <div class="discount-badge absolute -top-3 -right-3 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg transform rotate-12" style="background-color: #A0CDC8;">
+      ¡OFERTA!
+     </div><!-- Título -->
+     <h2 id="welcome-title" class="text-2xl font-bold text-center text-gray-800 mb-2">¡Bienvenido!</h2><!-- Mensaje de descuento -->
+     <div id="discount-message" class="text-center text-lg font-semibold text-transparent bg-clip-text" style="background-color: #A0CDC8; color: #ffffff; -webkit-background-clip: unset; background-clip: unset;">
+      ¡Recibiste un 10% de descuento en tu primer servicio!
+     </div><!-- Código de descuento -->
+     <div class="bg-gray-100 border-2 border-dashed rounded-xl p-3 mb-6 text-center" style="border-color: #64A09F;">
+      <p class="text-xs text-gray-500 mb-1">Tu código de descuento:</p>
+      <p class="text-xl font-mono font-bold tracking-wider" style="color: #64A09F;">BIENVENIDO10</p>
+     </div><!-- Botón --> <button id="close-button" onclick="closeModal()" class="w-full text-white font-semibold py-4 px-6 rounded-xl shadow-lg transform transition-all duration-200 hover:scale-[1.02] hover:shadow-xl active:scale-[0.98] focus:outline-none focus:ring-4" style="background-color: #64A09F; --tw-ring-color: #A0CDC8;"> ¡Genial, gracias! </button> <!-- Texto pequeño -->
+     <p class="text-center text-xs text-gray-400 mt-4">Válido por 7 días • No acumulable</p>
+    </div>
+   </div>
+  </div>
+  <script>
+    const defaultConfig = {
+      welcome_title: '¡Bienvenido!',
+      discount_message: '¡Recibiste un 10% de descuento en tu primer servicio!',
+      button_text: '¡Genial, gracias!',
+      primary_color: '#A0CDC8',
+      secondary_color: '#64A09F',
+      text_color: '#1f2937'
+    };
+
+    function closeModal() {
+      const backdrop = document.getElementById('modal-backdrop');
+      backdrop.style.opacity = '0';
+      backdrop.style.transition = 'opacity 0.3s ease-out';
+      setTimeout(() => {
+        backdrop.style.display = 'none';
+      }, 300);
+    }
+
+    async function onConfigChange(config) {
+      const title = document.getElementById('welcome-title');
+      const message = document.getElementById('discount-message');
+      const button = document.getElementById('close-button');
+
+      if (title) title.textContent = config.welcome_title || defaultConfig.welcome_title;
+      if (message) message.textContent = config.discount_message || defaultConfig.discount_message;
+      if (button) button.textContent = config.button_text || defaultConfig.button_text;
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.primary_color || defaultConfig.primary_color,
+            set: (value) => {
+              config.primary_color = value;
+              window.elementSdk.setConfig({ primary_color: value });
+            }
+          },
+          {
+            get: () => config.secondary_color || defaultConfig.secondary_color,
+            set: (value) => {
+              config.secondary_color = value;
+              window.elementSdk.setConfig({ secondary_color: value });
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              window.elementSdk.setConfig({ text_color: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ['welcome_title', config.welcome_title || defaultConfig.welcome_title],
+        ['discount_message', config.discount_message || defaultConfig.discount_message],
+        ['button_text', config.button_text || defaultConfig.button_text]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dab93a9f2274736',t:'MTc3MzI0Mjc3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
