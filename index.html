@@ -4,15 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Servicios de Aseo Profesional</title>
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <script src="/_sdk/element_sdk.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#103838",
+        secondary: "#64A0A0",
+        accent: "#A0CDC8"
+      }
+    }
+  }
+}
+</script>
   <style>
   
   </style>
   <style>body { box-sizing: border-box; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
  <body class="h-full">
     <!-- ===== POPUP PROMOCIÓN ===== -->
@@ -41,10 +53,9 @@
     </p>
 
     <!-- Botón -->
-    <button onclick="cerrarPopup()" 
-      class="bg-[#64A0A0] hover:bg-[#A0CDC8] text-white px-6 py-3 rounded-full font-semibold transition"><a href="https://wa.me/573103224962">
+   <a class="bg-[#64A0A0] hover:bg-[#A0CDC8] text-white px-6 py-3 rounded-full font-semibold transition" onclick="cerrarPopup()" href="https://wa.me/573103224962">
       Aprovechar Oferta</a>
-    </button>
+  
 
   </div>
 </div>
@@ -59,6 +70,13 @@
     <div class="particle" style="width: 40px; height: 40px; top: 40%; left: 5%; animation-delay: 3s;"></div>
     <div class="wave"></div>
    </div>
+
+   <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+      <img src="./assets/1.svg" class="fixed left-300 top-20 w-64 md:w-[500px] opacity-50 -z-10 pointer-events-none" alt="">
+      
+      <img src="./assets/2.svg" class="absolute right-0 top-0 w-64 md:w-[500px] opacity-50" alt="">
+   </div>
+
    <nav class="fixed top-0 left-0 right-0 z-50 blur-overlay bg-[#00000]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
      <div class="flex items-center justify-between h-16 sm:h-20">
@@ -76,9 +94,9 @@
 </div>
 
 <!-- BOTÓN COTIZAR DESKTOP -->
-<button id="cta-nav" class="hidden md:block btn-primary text-white px-4 py-2 sm:px-6 sm:py-2.5 rounded-full font-semibold text-sm sm:text-base">
-  <a href="chatbot.html">Cotizar ChatBot</a>
-</button>
+
+  <a id="cta-nav" class="hidden md:block btn-primary text-white px-4 py-2 sm:px-6 sm:py-2.5 rounded-full font-semibold text-sm sm:text-base" href="chatbot.html">Cotizar ChatBot</a>
+
 
 <!-- BOTÓN MENÚ MÓVIL -->
 <button id="mobile-menu-btn" class="md:hidden text-white text-2xl">
@@ -112,8 +130,8 @@
      <h1 id="hero-title" class="fade-in-up delay-1 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">Limpieza Impecable para tu <span class="text-[#A0CDC8]">Hogar y Vehículo</span></h1>
      <p id="hero-subtitle" class="fade-in-up delay-2 text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10">Transformamos espacios con servicios de aseo domiciliario y vehicular de alta calidad. Tu satisfacción es nuestra prioridad.</p>
      <div class="fade-in-up delay-3 flex flex-col sm:flex-row gap-4 justify-center">
-      <button id="hero-cta" class="btn-primary text-white px-8 py-4 rounded-full font-bold text-lg"> <a href="https://api.whatsapp.com/send/?phone=573008335323&text&type=phone_number&app_absent=0">Contáctanos Ahora</a> </button> 
-      <button class="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg border border-white/30 hover:bg-white/20 transition-all"> <a href="./chatbot.html">Ver Servicios</a> </button>
+      <a id="hero-cta" class="btn-primary text-white px-8 py-4 rounded-full font-bold text-lg" href="https://api.whatsapp.com/send/?phone=573008335323&text&type=phone_number&app_absent=0">Contáctanos Ahora</a> 
+      <a  class="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg border border-white/30 hover:bg-white/20 transition-all" href="./chatbot.html">Ver Servicios</a> 
      </div>
      <div class="fade-in-up delay-4 grid grid-cols-3 gap-4 sm:gap-8 mt-16 max-w-2xl mx-auto">
       <div class="text-center">
@@ -175,7 +193,7 @@
            <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Limpieza de sitios común</li>
            <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Planes personalizados</li>
            <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Aseo General</li>
-          </ul><button class="w-full btn-primary text-white py-3 rounded-xl font-semibold"> <a href="./chatbot.html">Solicitar Servicio</a> </button>
+          <br></ul><a class="w-full btn-primary text-white py-3 rounded-xl font-semibold" style="padding-left: 150px; padding-right: 150px;" href="./chatbot.html">Solicitar Servicio</a> 
          </div>
          
         </div>
@@ -192,7 +210,7 @@
            <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Pulido de carrocería</li>
            <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Tratamiento de cuero</li>
            <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Desodorización profesional</li>
-          </ul><button class="w-full btn-primary text-white py-3 rounded-xl font-semibold">  <a href="./chatbot.html">Solicitar Servicio</a> </button>
+          <br></ul><a class="w-full btn-primary text-white py-3 rounded-xl font-semibold" style="padding-left: 150px; padding-right: 150px;" href="./chatbot.html">Solicitar Servicio</a> 
          </div>
          <div class="service-card p-8">
           <div class="w-16 h-16 bg-gradient-to-br from-[#64A0A0] to-[#A0CDC8] rounded-2xl mb-6 flex items-center justify-center">
@@ -204,7 +222,7 @@
            <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Limpieza de oficinas</li>
            <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Mantenimiento de locales</li>
            <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Planes personalizados</li>
-          </ul><button class="w-full btn-primary text-white py-3 rounded-xl font-semibold"> <a href="./chatbot.html">Solicitar Servicio</a> </button>
+          <br></ul><a class="w-full btn-primary text-white py-3 rounded-xl font-semibold" style="padding-left: 150px; padding-right: 150px;" href="./chatbot.html">Solicitar Servicio</a> 
          </div>
         </div>
        </div>

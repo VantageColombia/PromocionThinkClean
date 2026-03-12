@@ -1,4 +1,6 @@
-  * { font-family: 'Poppins', sans-serif; }
+@import "tailwindcss";
+
+* { font-family: 'Poppins', sans-serif; }
     
     .animated-bg {
       background: linear-gradient(-45deg, #189292, #64A0A0, #A0CDC8, #052525);
