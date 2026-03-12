@@ -180,7 +180,7 @@
  </head>
  <body class="min-h-screen overflow-x-hidden">
 <div id="app" class="w-full min-h-screen">
-   <nav class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#103838]/95 to-[#64A0A0]/95 backdrop-blur-lg border-b border-white/10">
+   <nav class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#103838]/30 to-[#64A0A0]/90 backdrop-blur-lg border-b border-white/30">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
      <div class="flex items-center gap-3">
       <img class="logo" src="./assets/logo.svg" alt="">
@@ -218,7 +218,10 @@
       <div id="step-1" class="chatbot-step">
        <h3 class="text-2xl font-bold text-[#103838] mb-6">Selecciona el servicio que necesitas</h3>
        <div class="grid sm:grid-cols-2 gap-4">
-        <button type="button" class="service-btn p-6 border-2 border-gray-200 rounded-2xl text-left hover:border-[#64A0A0] hover:bg-[#64A0A0]/5 transition-all" data-service="domestica"> <h4 class="font-bold text-[#103838] text-lg mb-2">Limpieza Doméstica</h4><p class="text-gray-600 text-sm">Tu hogar siempre reluciente con un servicio adaptado a tu rutina.</p></button> <button type="button" class="service-btn p-6 border-2 border-gray-200 rounded-2xl text-left hover:border-[#64A0A0] hover:bg-[#64A0A0]/5 transition-all" data-service="corporativa"> <h4 class="font-bold text-[#103838] text-lg mb-2">Limpieza Corporativa</h4><p class="text-gray-600 text-sm">Espacios de trabajo limpios y organizados para más productividad.</p></button> <button type="button" class="service-btn p-6 border-2 border-gray-200 rounded-2xl text-left hover:border-[#64A0A0] hover:bg-[#64A0A0]/5 transition-all" data-service="obra"> <h4 class="font-bold text-[#103838] text-lg mb-2">Limpieza de Obra</h4><p class="text-gray-600 text-sm">Eliminamos escombros y residuos después de construcción o remodelación.</p></button> <button type="button" class="service-btn p-6 border-2 border-gray-200 rounded-2xl text-left hover:border-[#64A0A0] hover:bg-[#64A0A0]/5 transition-all" data-service="mudanza"> <h4 class="font-bold text-[#103838] text-lg mb-2">Pre y Post Mudanza</h4><p class="text-gray-600 text-sm">Deja tu antiguo hogar perfecto o recibe tu nuevo espacio limpio.</p></button> <button type="button" class="service-btn p-6 border-2 border-gray-200 rounded-2xl text-left hover:border-[#64A0A0] hover:bg-[#64A0A0]/5 transition-all" data-service="vehicular"> <h4 class="font-bold text-[#103838] text-lg mb-2">Lavado Vehicular a Domicilio</h4><p class="text-gray-600 text-sm">Tu vehículo impecable sin moverte de casa.</p></button>
+        <button type="button" class="service-btn p-6 border-2 border-gray-200 rounded-2xl text-left hover:border-[#64A0A0] hover:bg-[#64A0A0]/5 transition-all" data-service="domestica"> <h4 class="font-bold text-[#103838] text-lg mb-2">Limpieza Doméstica</h4><p class="text-gray-600 text-sm">Tu hogar siempre reluciente con un servicio adaptado a tu rutina.</p></button> 
+        <button type="button" class="service-btn p-6 border-2 border-gray-200 rounded-2xl text-left hover:border-[#64A0A0] hover:bg-[#64A0A0]/5 transition-all" data-service="corporativa"> <h4 class="font-bold text-[#103838] text-lg mb-2">Limpieza Corporativa</h4><p class="text-gray-600 text-sm">Espacios de trabajo limpios y organizados para más productividad.</p></button> 
+        <button type="button" class="service-btn p-6 border-2 border-gray-200 rounded-2xl text-left hover:border-[#64A0A0] hover:bg-[#64A0A0]/5 transition-all" data-service="mudanza"> <h4 class="font-bold text-[#103838] text-lg mb-2">Pre y Post Mudanza</h4><p class="text-gray-600 text-sm">Deja tu antiguo hogar perfecto o recibe tu nuevo espacio limpio.</p></button> 
+        <button type="button" class="service-btn p-6 border-2 border-gray-200 rounded-2xl text-left hover:border-[#64A0A0] hover:bg-[#64A0A0]/5 transition-all" data-service="vehicular"> <h4 class="font-bold text-[#103838] text-lg mb-2">Lavado Vehicular a Domicilio</h4><p class="text-gray-600 text-sm">Tu vehículo impecable sin moverte de casa.</p></button>
        </div>
       </div><!-- Step 2: Service Details -->
       <div id="step-2" class="chatbot-step hidden">
@@ -268,7 +271,7 @@
         <div><label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Teléfono</label> <input type="tel" id="phone" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#64A0A0] focus:ring-2 focus:ring-[#64A0A0]/20 outline-none transition-all" placeholder="Tu teléfono">
         </div>
        </div>
-       <div><label for="service" class="block text-sm font-medium text-gray-700 mb-2">Servicio de Interés</label> <select id="service" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#64A0A0] focus:ring-2 focus:ring-[#64A0A0]/20 outline-none transition-all"> <option value="">Selecciona un servicio</option> <option value="domiciliario">Aseo Domiciliario</option> <option value="vehicular">Aseo Vehicular</option> <option value="profunda">Limpieza Profunda</option> <option value="comercial">Aseo Comercial</option> <option value="detallado">Detallado Premium</option> </select>
+       <div><label for="service" class="block text-sm font-medium text-gray-700 mb-2">Servicio de Interés</label> <select id="service" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#64A0A0] focus:ring-2 focus:ring-[#64A0A0]/20 outline-none transition-all"> <option value="">Selecciona un servicio</option> <option value="Limpieza Domestica">Limpieza Domestica</option> <option value="Limpieza Empresarial">Limpieza Empresarial</option> <option value="Limpieza pre y post mudanza">Limpieza pre y post mudanza</option> <option value="Limpieza Vehicular">Limpieza Vehicular</option> </select>
        </div>
        <div><label for="message" class="block text-sm font-medium text-gray-700 mb-2">Mensaje</label> <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#64A0A0] focus:ring-2 focus:ring-[#64A0A0]/20 outline-none transition-all resize-none" placeholder="Cuéntanos más sobre lo que necesitas..."></textarea>
        </div><button type="submit" class="w-full btn-primary text-white py-4 rounded-xl font-bold text-lg"> Enviar Solicitud </button>
@@ -287,7 +290,7 @@
      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
       <div class="flex items-center gap-3">
        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#64A0A0] to-[#A0CDC8]">
-       </div><span class="text-white font-bold text-lg">CleanPro</span>
+       </div><img class="logo" src="./assets/logo.svg" alt="">
       </div><!-- Redes sociales y más -->
      </div><!-- Secciones adicionales -->
      <div class="grid md:grid-cols-4 gap-8 mb-12 mt-12"><!-- Información Legal -->
@@ -306,7 +309,7 @@
        <p class="text-white/60 text-sm">8:00 AM - 5:00 PM</p>
       </div><!-- WhatsApp -->
       <div>
-       <h4 class="text-white font-bold mb-4">WhatsApp</h4><a href="https://wa.me/573103224962" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-semibold"> 3103224962 </a> <br> <a href="https://wa.me/573008335323" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-semibold"> 3008335323 </a>
+       <h4 class="text-white font-bold mb-4">WhatsApp</h4><a href="https://wa.me/573103224962" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-semibold"> 3103224962 </a> <br> <br><a href="https://wa.me/573008335323" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-semibold"> 3008335323 </a>
       </div><!-- Contacto directo -->
       <div>
        <h4 class="text-white font-bold mb-4">Contacto</h4>
@@ -314,7 +317,7 @@
       </div>
      </div>
      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-white/60 text-sm">© 2024 CleanPro. Todos los derechos reservados.</p>
+      <p class="text-white/60 text-sm">© 2026 Think Clean. Todos los derechos reservados.</p>
      </div>
     </div>
    </footer>
@@ -386,7 +389,8 @@
         image: 'https://thinkclean.com.co/wp-content/uploads/2025/02/IMG_5529-1024x1024.jpg',
         options: [
           { id: '4h-dom', label: 'Servicio 4 horas', price: '115.000', desc: 'Ideal para apartamentos pequeños, apartaestudios o tareas básicas de mantenimiento. Incluye limpieza de superficies, baños, cocina y áreas comunes.' },
-          { id: '8h-dom', label: 'Servicio 8 horas', price: 'Consultar', desc: 'Perfecto para casas o apartamentos grandes. Se realiza una limpieza más profunda que abarca pisos, vidrios, muebles y rincones difíciles de alcanzar.' }
+          { id: '6h-dom', label: 'Servicio 6 horas', price: '148.000', desc: 'Perfecto para casas o apartamentos grandes. Se realiza una limpieza más profunda que abarca pisos, vidrios, muebles y rincones difíciles de alcanzar.' },
+          { id: '8h-dom', label: 'Servicio 8 horas', price: '180.000', desc: 'Perfecto para casas o apartamentos grandes. Se realiza una limpieza más profunda que abarca pisos, vidrios, muebles y rincones difíciles de alcanzar.' }
         ]
       },
       corporativa: {
@@ -395,16 +399,8 @@
         image: 'https://thinkclean.com.co/wp-content/uploads/2025/02/IMG_4915-Mejorado-NR.png',
         options: [
           { id: '4h-corp', label: 'Servicio 4 horas', price: '115.000', desc: 'Limpieza de oficinas y espacios comunes.' },
-          { id: '8h-corp', label: 'Servicio 8 horas', price: 'Consultar', desc: 'Limpieza profunda para empresas medianas.' }
-        ]
-      },
-      obra: {
-        name: 'Limpieza de Obra',
-        description: 'Deja que nosotros nos encarguemos de la limpieza después de una construcción o remodelación. Eliminamos polvo, escombros y residuos para que el espacio quede listo para su uso.',
-        image: 'https://thinkclean.com.co/wp-content/uploads/2025/02/IMG_4989-Mejorado-NR-1024x1024.png',
-        options: [
-          { id: '4h-obra', label: 'Servicio 4 horas', price: '115.000', desc: 'Limpieza gruesa enfocada en retirar escombros, restos de materiales y residuos superficiales.' },
-          { id: '8h-obra', label: 'Servicio 8 horas', price: 'Consultar', desc: 'Limpieza profunda y detallada, incluyendo vidrios, pisos, paredes y acabados, dejando el lugar listo para su entrega.' }
+          { id: '6h-corp', label: 'Servicio 6 horas', price: '148.000', desc: 'Limpieza profunda para empresas medianas.' },
+          { id: '8h-corp', label: 'Servicio 8 horas', price: '180.000', desc: 'Limpieza profunda para empresas medianas y grandes.' }
         ]
       },
       mudanza: {
@@ -413,7 +409,8 @@
         image: 'https://thinkclean.com.co/wp-content/uploads/2025/02/IMG_4915-Mejorado-NR.png',
         options: [
           { id: '4h-mud', label: 'Servicio 4 horas', price: '115.000', desc: 'Limpieza de pre-mudanza o post-mudanza básica.' },
-          { id: '8h-mud', label: 'Servicio 8 horas', price: 'Consultar', desc: 'Limpieza profunda pre o post mudanza.' }
+          { id: '6h-mud', label: 'Servicio 6 horas', price: '148.000', desc: 'Limpieza profunda pre o post mudanza.' },
+          { id: '8h-mud', label: 'Servicio 8 horas', price: '180.000', desc: 'Limpieza profunda pre o post mudanza.' }
         ]
       },
       vehicular: {

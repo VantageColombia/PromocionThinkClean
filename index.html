@@ -42,7 +42,7 @@
 
     <!-- Botón -->
     <button onclick="cerrarPopup()" 
-      class="bg-[#64A0A0] hover:bg-[#A0CDC8] text-white px-6 py-3 rounded-full font-semibold transition"><a href="https://wa.me/573008335323">
+      class="bg-[#64A0A0] hover:bg-[#A0CDC8] text-white px-6 py-3 rounded-full font-semibold transition"><a href="https://wa.me/573103224962">
       Aprovechar Oferta</a>
     </button>
 
@@ -99,7 +99,7 @@
   <a href="#contacto" class="block text-white text-lg">Contacto</a>
 
   <a href="chatbot.html" class="block bg-[#64A0A0] text-white py-3 rounded-full font-semibold">
-    Cotizar Ahora
+    Cotizar ChatBot
   </a>
 
 </div>
@@ -111,7 +111,9 @@
      </div>
      <h1 id="hero-title" class="fade-in-up delay-1 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">Limpieza Impecable para tu <span class="text-[#A0CDC8]">Hogar y Vehículo</span></h1>
      <p id="hero-subtitle" class="fade-in-up delay-2 text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10">Transformamos espacios con servicios de aseo domiciliario y vehicular de alta calidad. Tu satisfacción es nuestra prioridad.</p>
-     <div class="fade-in-up delay-3 flex flex-col sm:flex-row gap-4 justify-center"><button id="hero-cta" class="btn-primary text-white px-8 py-4 rounded-full font-bold text-lg"> Contáctanos Ahora </button> <button class="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg border border-white/30 hover:bg-white/20 transition-all"> Ver Servicios </button>
+     <div class="fade-in-up delay-3 flex flex-col sm:flex-row gap-4 justify-center">
+      <button id="hero-cta" class="btn-primary text-white px-8 py-4 rounded-full font-bold text-lg"> <a href="https://api.whatsapp.com/send/?phone=573008335323&text&type=phone_number&app_absent=0">Contáctanos Ahora</a> </button> 
+      <button class="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg border border-white/30 hover:bg-white/20 transition-all"> <a href="./chatbot.html">Ver Servicios</a> </button>
      </div>
      <div class="fade-in-up delay-4 grid grid-cols-3 gap-4 sm:gap-8 mt-16 max-w-2xl mx-auto">
       <div class="text-center">
@@ -150,9 +152,10 @@
      <div class="carousel-container relative max-w-5xl mx-auto">
       <div id="carousel-track" class="carousel-track">
        <div class="carousel-slide">
-        <div class="grid md:grid-cols-2 gap-6">
+        <div class="grid md:grid-cols-2 gap-4">
          <div class="service-card p-8">
-          <div class="w-16 h-16 bg-gradient-to-br from-[#64A0A0] to-[#A0CDC8] rounded-2xl mb-6">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#64A0A0] to-[#A0CDC8] rounded-2xl mb-6 flex items-center justify-center">
+            <img style="align-items: center;" width="50" height="48" src="https://img.icons8.com/?size=100&id=12850&format=png&color=000000" alt="automatic-car-wash"/>
           </div>
           <h3 class="text-2xl font-bold text-[#103838] mb-4">Aseo Domiciliario</h3>
           <p class="text-gray-600 mb-6">Limpieza profunda y profesional para tu hogar. Utilizamos productos ecológicos y técnicas avanzadas.</p>
@@ -160,52 +163,11 @@
            <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Limpieza general de habitaciones</li>
            <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Desinfección de baños y cocinas</li>
            <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Limpieza de ventanas y cristales</li>
-          </ul><button class="w-full btn-primary text-white py-3 rounded-xl font-semibold"> Solicitar Servicio </button>
-         </div>
-         <div class="service-card p-8">
-          <div class="w-16 h-16 bg-gradient-to-br from-[#64A0A0] to-[#A0CDC8] rounded-2xl mb-6">
-          </div>
-          <h3 class="text-2xl font-bold text-[#103838] mb-4">Limpieza Profunda</h3>
-          <p class="text-gray-600 mb-6">Servicio exhaustivo para eliminar suciedad acumulada y bacterias en cada rincón.</p>
-          <ul class="space-y-3 mb-6">
-           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Lavado de alfombras y tapetes</li>
-           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Limpieza de muebles tapizados</li>
-           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Tratamiento anti-ácaros</li>
-          </ul><button class="w-full btn-primary text-white py-3 rounded-xl font-semibold"> Solicitar Servicio </button>
-         </div>
-        </div>
-       </div>
-       <div class="carousel-slide">
-        <div class="grid md:grid-cols-2 gap-6">
-         <div class="service-card p-8">
-          <div class="w-16 h-16 bg-gradient-to-br from-[#64A0A0] to-[#A0CDC8] rounded-2xl mb-6">
-          </div>
-          <h3 class="text-2xl font-bold text-[#103838] mb-4">Limpieza Domestica</h3>
-          <p class="text-gray-600 mb-6">Tu vehículo como nuevo con nuestro servicio de lavado y detallado profesional.</p>
-          <ul class="space-y-3 mb-6">
-           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Lavado exterior completo</li>
-           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Aspirado y limpieza interior</li>
-           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Encerado y protección</li>
-          </ul><button class="w-full btn-primary text-white py-3 rounded-xl font-semibold"> Solicitar Servicio </button>
+          </ul><button class="w-full btn-primary text-white py-3 rounded-xl font-semibold">  <a href="./chatbot.html">Solicitar Servicio</a> </button>
          </div>
          <div class="service-card p-8">
           <div class="w-16 h-16 bg-gradient-to-br from-[#64A0A0] to-[#A0CDC8] rounded-2xl mb-6 flex items-center justify-center">
-            <img style="align-items: center;" width="50" height="48" a src="https://img.icons8.com/color/48/automatic-car-wash.png" alt="automatic-car-wash"/>
-          </div>
-          <h3 class="text-2xl font-bold text-[#103838] mb-4">Aseo Vehicular</h3>
-          <p class="text-gray-600 mb-6">El máximo nivel de cuidado para tu vehículo con productos de primera calidad.</p>
-          <ul class="space-y-3 mb-6">
-           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Pulido de carrocería</li>
-           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Tratamiento de cuero</li>
-           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Desodorización profesional</li>
-          </ul><button class="w-full btn-primary text-white py-3 rounded-xl font-semibold"> Solicitar Servicio </button>
-         </div>
-        </div>
-       </div>
-       <div class="carousel-slide">
-        <div class="grid md:grid-cols-2 gap-6">
-         <div class="service-card p-8">
-          <div class="w-16 h-16 bg-gradient-to-br from-[#64A0A0] to-[#A0CDC8] rounded-2xl mb-6">
+            <img style="align-items: center;" width="50" height="48" src="https://img.icons8.com/?size=100&id=103932&format=png&color=000000" alt="automatic-car-wash"/>
           </div>
           <h3 class="text-2xl font-bold text-[#103838] mb-4">Limpieza Empresarial</h3>
           <p class="text-gray-600 mb-6">Mantenemos tu negocio impecable con servicios de limpieza comercial.</p>
@@ -215,15 +177,33 @@
            <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Planes personalizados</li>
           </ul><button class="w-full btn-primary text-white py-3 rounded-xl font-semibold"> Solicitar Servicio </button>
          </div>
+         
+        </div>
+       </div>
+       <div class="carousel-slide">
+        <div class="grid md:grid-cols-2 gap-4">
          <div class="service-card p-8">
-          <div class="w-16 h-16 bg-gradient-to-br from-[#64A0A0] to-[#A0CDC8] rounded-2xl mb-6">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#64A0A0] to-[#A0CDC8] rounded-2xl mb-6 flex items-center justify-center">
+            <img style="align-items: center;" width="50" height="48"  src="https://img.icons8.com/color/48/automatic-car-wash.png" alt="automatic-car-wash"/>
           </div>
-          <h3 class="text-2xl font-bold text-[#103838] mb-4">Limpieza pre y post mudanza</h3>
-          <p class="text-gray-600 mb-6">Productos biodegradables y técnicas amigables con el medio ambiente.</p>
+          <h3 class="text-2xl font-bold text-[#103838] mb-4">Aseo Vehicular</h3>
+          <p class="text-gray-600 mb-6">El máximo nivel de cuidado para tu vehículo con productos de primera calidad.</p>
           <ul class="space-y-3 mb-6">
-           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Productos 100% ecológicos</li>
-           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Sin químicos agresivos</li>
-           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Seguro para mascotas</li>
+           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Pulido de carrocería</li>
+           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Tratamiento de cuero</li>
+           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Desodorización profesional</li>
+          </ul><button class="w-full btn-primary text-white py-3 rounded-xl font-semibold">  <a href="./chatbot.html">Solicitar Servicio</a> </button>
+         </div>
+         <div class="service-card p-8">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#64A0A0] to-[#A0CDC8] rounded-2xl mb-6 flex items-center justify-center">
+            <img style="align-items: center;" width="50" height="48" src="https://img.icons8.com/?size=100&id=103932&format=png&color=000000" alt="automatic-car-wash"/>
+          </div>
+          <h3 class="text-2xl font-bold text-[#103838] mb-4">Limpieza Empresarial</h3>
+          <p class="text-gray-600 mb-6">Mantenemos tu negocio impecable con servicios de limpieza comercial.</p>
+          <ul class="space-y-3 mb-6">
+           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Limpieza de oficinas</li>
+           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Mantenimiento de locales</li>
+           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Planes personalizados</li>
           </ul><button class="w-full btn-primary text-white py-3 rounded-xl font-semibold"> Solicitar Servicio </button>
          </div>
         </div>
@@ -233,7 +213,9 @@
        </svg></button> <button id="next-btn" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 w-12 h-12 bg-white/90 rounded-full shadow-lg flex items-center justify-center text-[#103838] hover:bg-white transition-all hover:scale-110 z-10">
        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
        </svg></button> 
-      <div class="flex justify-center gap-3 mt-8"><button class="indicator active" data-slide="0"></button> <button class="indicator" data-slide="1"></button> <button class="indicator" data-slide="2"></button>
+      <div class="flex justify-center gap-2 mt-6">
+        <button class="indicator active" data-slide="0"></button> 
+        <button class="indicator" data-slide="1"></button> 
       </div>
      </div>
     </div>
@@ -245,25 +227,37 @@
      </div>
      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
       <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-all hover:transform hover:scale-105">
-       <div class="w-14 h-14 bg-[#A0CDC8] rounded-xl mx-auto mb-4">
+       <div class="w-14 h-14 bg-[#A0CDC8] rounded-2xl mx-auto mb-4">
+        <div class="w-16 h-16 bg-gradient-to-br from-[yellow] to-[#FEBF08] rounded-2xl mb-6 flex items-center justify-center">
+            <img style="align-items: center;" width="50" height="48" src="https://img.icons8.com/?size=100&id=crX4uqprHPro&format=png&color=000000" alt="automatic-car-wash"/>
+          </div>
        </div>
        <h3 class="text-white font-bold text-lg mb-2">Puntualidad</h3>
        <p class="text-white/70 text-sm">Llegamos siempre a tiempo, respetando tu agenda</p>
       </div>
       <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-all hover:transform hover:scale-105">
-       <div class="w-14 h-14 bg-[#A0CDC8] rounded-xl mx-auto mb-4">
+       <div class="w-14 h-14 bg-[#A0CDC8] rounded-2xl mx-auto mb-4">
+        <div class="w-16 h-16 bg-gradient-to-br from-[#83CEE4] to-[#0995D2] rounded-2xl mb-6 flex items-center justify-center">
+            <img style="align-items: center;" width="50" height="48" src="https://img.icons8.com/?size=100&id=WdpOiowt42I7&format=png&color=000000" alt="automatic-car-wash"/>
+          </div>
        </div>
        <h3 class="text-white font-bold text-lg mb-2">Confianza</h3>
        <p class="text-white/70 text-sm">Personal verificado y de total confianza</p>
       </div>
       <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-all hover:transform hover:scale-105">
-       <div class="w-14 h-14 bg-[#A0CDC8] rounded-xl mx-auto mb-4">
+       <div class="w-14 h-14 bg-[#A0CDC8] rounded-2xl mx-auto mb-4">
+        <div class="w-16 h-16 bg-gradient-to-br from-[blue] to-[red] rounded-2xl mb-6 flex items-center justify-center">
+            <img style="align-items: center;" width="50" height="48" src="https://img.icons8.com/?size=100&id=17391&format=png&color=000000" alt="automatic-car-wash"/>
+          </div>
        </div>
        <h3 class="text-white font-bold text-lg mb-2">Calidad</h3>
        <p class="text-white/70 text-sm">Productos premium y técnicas profesionales</p>
       </div>
       <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-all hover:transform hover:scale-105">
-       <div class="w-14 h-14 bg-[#A0CDC8] rounded-xl mx-auto mb-4">
+       <div class="w-14 h-14 bg-[#A0CDC8] rounded-2xl mx-auto mb-4">
+        <div class="w-16 h-16 bg-gradient-to-br from-[yellow] to-[green] rounded-2xl mb-6 flex items-center justify-center">
+            <img style="align-items: center;" width="50" height="48" src="https://img.icons8.com/?size=100&id=76948&format=png&color=000000" alt="automatic-car-wash"/>
+          </div>
        </div>
        <h3 class="text-white font-bold text-lg mb-2">Precios Justos</h3>
        <p class="text-white/70 text-sm">Tarifas competitivas sin sorpresas</p>
@@ -285,7 +279,14 @@
         <div><label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Teléfono</label> <input type="tel" id="phone" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#64A0A0] focus:ring-2 focus:ring-[#64A0A0]/20 outline-none transition-all" placeholder="Tu teléfono">
         </div>
        </div>
-       <div><label for="service" class="block text-sm font-medium text-gray-700 mb-2">Servicio de Interés</label> <select id="service" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#64A0A0] focus:ring-2 focus:ring-[#64A0A0]/20 outline-none transition-all"> <option value="">Selecciona un servicio</option> <option value="domiciliario">Aseo Domiciliario</option> <option value="vehicular">Aseo Vehicular</option> <option value="profunda">Limpieza Profunda</option> <option value="comercial">Aseo Comercial</option> <option value="detallado">Detallado Premium</option> </select>
+       <div><label for="service" class="block text-sm font-medium text-gray-700 mb-2">Servicio de Interés</label> 
+        <select id="service" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#64A0A0] focus:ring-2 focus:ring-[#64A0A0]/20 outline-none transition-all"> 
+          <option value="">Selecciona un servicio</option> 
+          <option value="Limpieza Doméstica">Limpieza Doméstica</option> 
+          <option value="Limpieza Corporativa">Limpieza Corporativa</option> 
+          <option value="Limpieza Pre y post mundanza">Limpieza Pre y post mundanza</option> 
+          <option value="Limpieza Vehicular">Limpieza Vehicular</option>  
+        </select>
        </div>
        <div><label for="message" class="block text-sm font-medium text-gray-700 mb-2">Mensaje</label> <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#64A0A0] focus:ring-2 focus:ring-[#64A0A0]/20 outline-none transition-all resize-none" placeholder="Cuéntanos más sobre lo que necesitas..."></textarea>
        </div><button type="submit" class="w-full btn-primary text-white py-4 rounded-xl font-bold text-lg"> Enviar Solicitud </button>
@@ -353,7 +354,7 @@
     
 
     let currentSlide = 0;
-    const totalSlides = 3;
+    const totalSlides = 2;
     const track = document.getElementById('carousel-track');
     const indicators = document.querySelectorAll('.indicator');
     const prevBtn = document.getElementById('prev-btn');
@@ -501,5 +502,4 @@ if (mobileBtn && mobileMenu) {
   </script>
  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dab4e6743aef7b8',t:'MTc3MzIzOTk0Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
-
 
