@@ -197,7 +197,7 @@ tailwind.config = {
    <nav class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#103838]/30 to-[#64A0A0]/90 backdrop-blur-lg border-b border-white/30">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
      <div class="flex items-center gap-3">
-      <img class="logo" src="./assets/logo.svg" alt="">
+      <img class="w-60  h-auto" src="./assets/logo.svg" alt="">
      </div>
      <div class="hidden md:flex items-center gap-8"><a href="index.html" class="nav-link text-white hover:text-[#A0CDC8] transition-colors font-medium">Principal</a> <a href="index.html#contacto" class="nav-link text-white hover:text-[#A0CDC8] transition-colors font-medium">Contacto</a> <a href="https://wa.me/573103224962" target="_blank" rel="noopener noreferrer" class="btn-primary text-white px-6 py-2 rounded-lg font-semibold text-sm">WhatsApp</a>
      </div><button id="mobile-menu-btn" type="button" class="md:hidden text-white">
@@ -235,7 +235,6 @@ tailwind.config = {
         <button type="button" class="service-btn p-6 border-2 border-gray-200 rounded-2xl text-left hover:border-[#64A0A0] hover:bg-[#64A0A0]/5 transition-all" data-service="domestica"> <h4 class="font-bold text-[#103838] text-lg mb-2">Limpieza Doméstica</h4><p class="text-gray-600 text-sm">Tu hogar siempre reluciente con un servicio adaptado a tu rutina.</p></button> 
         <button type="button" class="service-btn p-6 border-2 border-gray-200 rounded-2xl text-left hover:border-[#64A0A0] hover:bg-[#64A0A0]/5 transition-all" data-service="corporativa"> <h4 class="font-bold text-[#103838] text-lg mb-2">Limpieza Corporativa</h4><p class="text-gray-600 text-sm">Espacios de trabajo limpios y organizados para más productividad.</p></button> 
         <button type="button" class="service-btn p-6 border-2 border-gray-200 rounded-2xl text-left hover:border-[#64A0A0] hover:bg-[#64A0A0]/5 transition-all" data-service="mudanza"> <h4 class="font-bold text-[#103838] text-lg mb-2">Pre y Post Mudanza</h4><p class="text-gray-600 text-sm">Deja tu antiguo hogar perfecto o recibe tu nuevo espacio limpio.</p></button> 
-        <button type="button" class="service-btn p-6 border-2 border-gray-200 rounded-2xl text-left hover:border-[#64A0A0] hover:bg-[#64A0A0]/5 transition-all" data-service="vehicular"> <h4 class="font-bold text-[#103838] text-lg mb-2">Lavado Vehicular a Domicilio</h4><p class="text-gray-600 text-sm">Tu vehículo impecable sin moverte de casa.</p></button>
        </div>
       </div><!-- Step 2: Service Details -->
       <div id="step-2" class="chatbot-step hidden">
@@ -342,7 +341,7 @@ tailwind.config = {
      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
       <div class="flex items-center gap-3">
        <div class="w-0 h-0 rounded-full ">
-       </div><img class="logo" src="./assets/logo.svg" alt="">
+       </div><img class="w-60  h-auto" src="./assets/logo.svg" alt="">
       </div><!-- Redes sociales y más -->
      </div><!-- Secciones adicionales -->
      <div class="grid md:grid-cols-4 gap-8 mb-12 mt-12"><!-- Información Legal -->
@@ -361,7 +360,8 @@ tailwind.config = {
        <p class="text-white/60 text-sm">8:00 AM - 5:00 PM</p>
       </div><!-- WhatsApp -->
       <div>
-       <h4 class="text-white font-bold mb-4">WhatsApp</h4><a href="https://wa.me/573103224962" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-semibold"> 3103224962 </a> <br> <br><a href="https://wa.me/573008335323" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-semibold"> 3008335323 </a>
+       <h4 class="text-white font-bold mb-4">WhatsApp</h4><a href="https://wa.me/573103224962" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white/20 backdrop-bl hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-semibold"> 3103224962 </a> <br> <br>
+       <a href="https://wa.me/573008335323" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white/20 backdrop-bl hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-semibold"> 3008335323 </a>
       </div><!-- Contacto directo -->
       <div>
        <h4 class="text-white font-bold mb-4">Contacto</h4>
@@ -458,22 +458,13 @@ tailwind.config = {
       mudanza: {
         name: 'Pre y Post Mudanza',
         description: 'Deja tu antiguo hogar en perfectas condiciones o recibe tu nuevo espacio completamente limpio.',
-        image: 'https://thinkclean.com.co/wp-content/uploads/2025/02/IMG_4915-Mejorado-NR.png',
+        image: 'https://thinkclean.com.co/wp-content/uploads/2025/02/IMG_4989-Mejorado-NR-1024x1024.png',
         options: [
           { id: '4h-mud', label: 'Servicio 4 horas', price: '115.000', desc: 'Limpieza de pre-mudanza o post-mudanza básica.' },
           { id: '6h-mud', label: 'Servicio 6 horas', price: '148.000', desc: 'Limpieza profunda pre o post mudanza.' },
           { id: '8h-mud', label: 'Servicio 8 horas', price: '180.000', desc: 'Limpieza profunda pre o post mudanza.' }
         ]
       },
-      vehicular: {
-        name: 'Lavado Vehicular a Domicilio',
-        description: 'Tu vehículo impecable sin moverte de casa. Servicios completos de lavado y detallado en tu domicilio.',
-        image: 'https://thinkclean.com.co/wp-content/uploads/2025/02/IMG_4989-Mejorado-NR-1024x1024.png',
-        options: [
-          { id: 'lavado-basico', label: 'Lavado Básico', price: 'Consultar', desc: 'Lavado exterior completo y limpieza interior.' },
-          { id: 'detallado-premium', label: 'Detallado Premium', price: 'Consultar', desc: 'Lavado completo con pulido y protección especial.' }
-        ]
-      }
     };
 
     let currentService = null;
