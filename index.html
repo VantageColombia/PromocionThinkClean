@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Think Clean</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/icono.svg" type="image/png">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" href="assets/logo.png" type="image/png">
 
 <script>
 tailwind.config = {
@@ -22,7 +22,14 @@ tailwind.config = {
   }
 }
 </script>
-  <style>body { box-sizing: border-box; }</style>
+  <style>
+    body { box-sizing: border-box; }
+    /* Estilos necesarios para el carrusel original */
+    .carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
+    .carousel-slide { min-width: 100%; }
+    .indicator { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.3); border: none; cursor: pointer; transition: background 0.3s; }
+    .indicator.active { background: white; }
+  </style>
  </head>
  <body class="h-full">
     <div id="promoPopup" class="fixed inset-0 flex items-center justify-center bg-black/60 backdrop-blur-sm z-[999]">
@@ -73,7 +80,7 @@ tailwind.config = {
         <a href="https://forms.office.com/r/j3NJqTJ3md" class="nav-link text-white/90 hover:text-white transition-colors">Trabaja con nosotros</a>
       </div>
 
-      <a id="cta-nav" class="hidden md:block btn-primary text-white px-4 py-2 sm:px-6 sm:py-2.5 rounded-full font-semibold text-sm sm:text-base" href="chatbot.html">Cotizar</a>
+      <a id="cta-nav" class="hidden md:block bg-[#64A0A0] hover:bg-[#A0CDC8] transition-colors text-white px-4 py-2 sm:px-6 sm:py-2.5 rounded-full font-semibold text-sm sm:text-base" href="chatbot.html">Cotizar</a>
 
       <button id="mobile-menu-btn" class="md:hidden text-white text-2xl">
         ☰
@@ -105,13 +112,13 @@ tailwind.config = {
     <span class="absolute inset-0 bg-gradient-to-r from-[#A0CDC8] to-[#103838] blur-[40px] opacity-60"></span>
     
     <span class="relative text-transparent bg-clip-text bg-gradient-to-r from-white via-[#A0CDC8] to-[#64A0A0] uppercase text-5xl sm:text-6xl md:text-8xl drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
-      HOGAR Y VEHÍCULO
+      HOGAR 
     </span>
   </span>
 </h1>
-     <p id="hero-subtitle" class="fade-in-up delay-2 text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10">Transformamos espacios con servicios de aseo domiciliario y vehicular de alta calidad. Tu satisfacción es nuestra prioridad.</p>
+     <p id="hero-subtitle" class="fade-in-up delay-2 text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10">Transformamos espacios con servicios de aseo domiciliario de alta calidad. Tu satisfacción es nuestra prioridad.</p>
      <div class="fade-in-up delay-3 flex flex-col sm:flex-row gap-4 justify-center">
-      <a id="hero-cta" class="btn-primary text-white px-8 py-4 rounded-full font-bold text-lg" href="https://api.whatsapp.com/send/?phone=573008335323&text&type=phone_number&app_absent=0">Contáctanos Ahora</a> 
+      <a id="hero-cta" class="bg-[#64A0A0] hover:bg-[#A0CDC8] transition-colors text-white px-8 py-4 rounded-full font-bold text-lg" href="https://api.whatsapp.com/send/?phone=573008335323&text&type=phone_number&app_absent=0">Contáctanos Ahora</a> 
       <a class="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg border border-white/30 hover:bg-white/20 transition-all text-center" href="./chatbot.html">Ver Servicios</a> 
      </div>
      <div class="fade-in-up delay-4 grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto">
@@ -120,7 +127,7 @@ tailwind.config = {
        <div class="text-white/70 text-sm sm:text-base">Clientes Felices</div>
       </div>
       <div class="text-center">
-       <div class="text-3xl sm:text-4xl font-bold text-white">5★</div>
+       <div class="text-3xl sm:text-4xl font-bold text-white">4.7★</div>
        <div class="text-white/70 text-sm sm:text-base">Calificación</div>
       </div>
       <div class="text-center">
@@ -137,66 +144,65 @@ tailwind.config = {
       <h2 id="services-title" class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">Nuestros Servicios</h2>
       <p class="text-white/70 max-w-xl mx-auto">Soluciones completas de limpieza adaptadas a tus necesidades</p>
      </div>
-     <div class="carousel-container relative max-w-5xl mx-auto">
+     <div class="carousel-container relative max-w-5xl mx-auto overflow-hidden">
       <div id="carousel-track" class="carousel-track">
        
        <div class="carousel-slide">
         <div class="grid md:grid-cols-2 gap-6">
-         <div class="service-card p-6 sm:p-8 flex flex-col h-full">
+         <div class="bg-white rounded-2xl p-6 sm:p-8 flex flex-col h-full shadow-lg">
           <div class="w-16 h-16 bg-gradient-to-br from-[#64A0A0] to-[#A0CDC8] rounded-2xl mb-6 flex items-center justify-center">
             <img width="50" height="48" src="https://img.icons8.com/?size=100&id=12850&format=png&color=000000" alt="aseo-domiciliario"/>
           </div>
           <h3 class="text-2xl font-bold text-[#103838] mb-4">Limpieza Domestica</h3>
           <p class="text-gray-600 mb-6 flex-grow">Limpieza para tu hogar. Utilizamos productos ecológicos y técnicas avanzadas.</p>
           <ul class="space-y-3 mb-8">
-           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Limpieza general de habitaciones</li>
-           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Desinfección de baños y cocinas</li>
-           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Limpieza de ventanas y cristales</li>
+           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm text-white">✓</span> Limpieza general de habitaciones</li>
+           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm text-white">✓</span> Desinfección de baños y cocinas</li>
+           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm text-white">✓</span> Limpieza de ventanas y cristales</li>
           </ul>
-          <a class="block text-center w-full btn-primary text-white py-3 rounded-xl font-semibold mt-auto" href="./chatbot.html">Solicitar Servicio</a>
+          <a class="block text-center w-full bg-[#103838] hover:bg-[#64A0A0] transition-colors text-white py-3 rounded-xl font-semibold mt-auto" href="./chatbot.html">Solicitar Servicio</a>
          </div>
-         <div class="service-card p-6 sm:p-8 flex flex-col h-full">
+         <div class="bg-white rounded-2xl p-6 sm:p-8 flex flex-col h-full shadow-lg">
           <div class="w-16 h-16 bg-gradient-to-br from-[#64A0A0] to-[#A0CDC8] rounded-2xl mb-6 flex items-center justify-center">
             <img width="50" height="48" src="https://img.icons8.com/?size=100&id=dWq8B4mn8B08&format=png&color=000000" alt="mudanza"/>
           </div>
           <h3 class="text-2xl font-bold text-[#103838] mb-4">Limpieza pre y post mudanza</h3>
           <p class="text-gray-600 mb-6 flex-grow">Deja tu antiguo hogar en perfectas condiciones o recibe tu nuevo espacio completamente limpio.</p>
           <ul class="space-y-3 mb-8">
-           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Limpieza de sitios comunes</li>
-           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Planes personalizados</li>
-           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Aseo General</li>
+           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm text-white">✓</span> Limpieza de sitios comunes</li>
+           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm text-white">✓</span> Planes personalizados</li>
+           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm text-white">✓</span> Aseo General</li>
           </ul>
-          <a class="block text-center w-full btn-primary text-white py-3 rounded-xl font-semibold mt-auto" href="./chatbot.html">Solicitar Servicio</a>
+          <a class="block text-center w-full bg-[#103838] hover:bg-[#64A0A0] transition-colors text-white py-3 rounded-xl font-semibold mt-auto" href="./chatbot.html">Solicitar Servicio</a>
          </div>
         </div>
        </div>
 
        <div class="carousel-slide">
         <div class="grid md:grid-cols-2 gap-6">
-         <div class="service-card p-6 sm:p-8 flex flex-col h-full">
+         <div class="bg-white rounded-2xl p-6 sm:p-8 flex flex-col h-full shadow-lg">
           <div class="w-16 h-16 bg-gradient-to-br from-[#64A0A0] to-[#A0CDC8] rounded-2xl mb-6 flex items-center justify-center">
             <img width="50" height="48" src="https://img.icons8.com/?size=100&id=12238&format=png&color=000000" alt="vehicular"/>
           </div>
           <h3 class="text-2xl font-bold text-[#103838] mb-4">Limpieza Profesional</h3>
           <p class="text-gray-600 mb-6 flex-grow">Limpieza profunda y profesional para tu hogar. Utilizamos productos ecológicos y técnicas avanzadas..</p>
           <ul class="space-y-3 mb-8">
-           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Limpieza general de diferente sitios del hogar</li>
-      
+           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm text-white">✓</span> Limpieza general de diferente sitios del hogar</li>
           </ul>
-          <a class="block text-center w-full btn-primary text-white py-3 rounded-xl font-semibold mt-auto" href="./chatbot.html">Solicitar Servicio</a>
+          <a class="block text-center w-full bg-[#103838] hover:bg-[#64A0A0] transition-colors text-white py-3 rounded-xl font-semibold mt-auto" href="./chatbot.html">Solicitar Servicio</a>
          </div>
-         <div class="service-card p-6 sm:p-8 flex flex-col h-full">
+         <div class="bg-white rounded-2xl p-6 sm:p-8 flex flex-col h-full shadow-lg">
           <div class="w-16 h-16 bg-gradient-to-br from-[#64A0A0] to-[#A0CDC8] rounded-2xl mb-6 flex items-center justify-center">
             <img width="50" height="48" src="https://img.icons8.com/?size=100&id=103932&format=png&color=000000" alt="empresarial"/>
           </div>
           <h3 class="text-2xl font-bold text-[#103838] mb-4">Limpieza Empresarial</h3>
           <p class="text-gray-600 mb-6 flex-grow">Mantenemos tu negocio impecable con servicios de limpieza comercial.</p>
           <ul class="space-y-3 mb-8">
-           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Limpieza de oficinas</li>
-           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Mantenimiento de locales</li>
-           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm">✓</span> Planes personalizados</li>
+           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm text-white">✓</span> Limpieza de oficinas</li>
+           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm text-white">✓</span> Mantenimiento de locales</li>
+           <li class="flex items-center gap-3 text-gray-700"><span class="w-6 h-6 bg-[#A0CDC8] rounded-full flex items-center justify-center text-sm text-white">✓</span> Planes personalizados</li>
           </ul>
-          <a class="block text-center w-full btn-primary text-white py-3 rounded-xl font-semibold mt-auto" href="./chatbot.html">Solicitar Servicio</a>
+          <a class="block text-center w-full bg-[#103838] hover:bg-[#64A0A0] transition-colors text-white py-3 rounded-xl font-semibold mt-auto" href="./chatbot.html">Solicitar Servicio</a>
          </div>
         </div>
        </div>
@@ -253,7 +259,153 @@ tailwind.config = {
        <p class="text-white/70 text-sm">Tarifas competitivas sin sorpresas</p>
       </div>
      </div>
-    </div>
+
+     <div class="mt-28">
+        <div class="text-center mb-10">
+          <span class="inline-block px-4 border-radius-3 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white/90 text-sm mb-4">Nuestro Respaldo</span>
+          <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">Clientes que confían en nosotros</h3>
+        </div>
+        
+        <div class="relative max-w-2xl mx-auto border-2 rounded-2xl overflow-hidden rounded-3x2 bg-white/20 backdrop-blur-md border border-white/10 p-10" id="clients-container">
+          
+          <div id="clients-track" class="flex transition-transform duration-700 ease-in-out w-full" style="transform: translateX(0%);">
+            
+            <div class="w-full flex-shrink-0 flex flex-col items-center justify-center">
+              <div class="flex items-center justify-center mb-6 overflow-hidden">
+                <img src="https://ambacar.co/wp-content/uploads/2024/12/logo-ambacar-blanco.png" alt="Cliente 1" class="w-full h-full object-cover">
+                </div>
+              <h4 class="text-white text-2xl font-semibold">Ambacar</h4>
+              <p class="text-white/70 text-sm mt-2">Empresa corporativa</p>
+            </div>
+
+            <div class="w-full flex-shrink-0 flex flex-col items-center justify-center">
+              <div class="flex items-center justify-center mb-6 overflow-hidden">
+                <img src="https://www.chevrolet.com.co/content/dam/chevrolet/south-america/colombia/espanol/index/shared-assets/chevrolet-bowtie-120.svg" alt="Cliente 2" class="w-full h-full object-cover">
+                </div>
+              <h4 class="text-white text-2xl font-semibold">Chevrolet</h4>
+              <p class="text-white/70 text-sm mt-2">Empresa corporativa</p>
+            </div>
+
+            <div class="w-full flex-shrink-0 flex flex-col items-center justify-center">
+              <div class="flex items-center justify-center mb-6 overflow-hidden ">
+                <img src="https://images.ctfassets.net/1weu96fhrx5b/5bOiWIEuc7uZEUSznxZoy5/185818bffdbb3f4275669f70abc9b6f5/logo-horizontal__1_-tagMCT-v2-1.svg" alt="Cliente 3" class="w-full h-full object-cover">
+                </div>
+              <h4 class="text-white text-2xl font-semibold">Cruz Verde</h4>
+              <p class="text-white/70 text-sm mt-2">Cadena de Droguerias</p>
+            </div>
+
+            <div class="w-full flex-shrink-0 flex flex-col items-center justify-center">
+              <div class="flex items-center justify-center mb-6 overflow-hidden ">
+                <img src="https://mazda.madiautos.com.co/wp-content/uploads/2023/03/Logo-Madiautos-Mazda.png" alt="Cliente 4" class="w-full h-full object-cover">
+                </div>
+              <h4 class="text-white text-2xl font-semibold">Mazda</h4>
+              <p class="text-white/70 text-sm mt-2">Empresa corporativa</p>
+            </div>
+
+            <div class="w-full flex-shrink-0 flex flex-col items-center justify-center">
+              <div class="flex items-center justify-center mb-6 overflow-hidden ">
+                <img src="https://www.mercedes-benz.com.co/mercedes/site/artic/20220726/imag/foto_0000003720220726164210/foto_0000003020220726164210_Mercedes-Blanco-3.png" alt="Cliente 5" class="w-full h-full object-cover">
+                </div>
+              <h4 class="text-white text-2xl font-semibold">Mercedez Benz</h4>
+              <p class="text-white/70 text-sm mt-2">Empresa corporativa</p>
+            </div>
+
+            <div class="w-full flex-shrink-0 flex flex-col items-center justify-center">
+              <div class="flex items-center justify-center mb-6 overflow-hidden ">
+                <img src="https://matrimol.com.co/wp-content/uploads/2025/11/Logo-para-pagina-1024x192.png" alt="Cliente 5" class="w-full h-full object-cover">
+                </div>
+              <h4 class="text-white text-2xl font-semibold">Matrimol S.A.S</h4>
+              <p class="text-white/70 text-sm mt-2">Empresa corporativa</p>
+            </div>
+
+            <div class="w-full flex-shrink-0 flex flex-col items-center justify-center">
+              <div class="flex items-center justify-center mb-6 overflow-hidden ">
+                <img src="https://softesting.com/wp-content/uploads/2025/04/LOGO-SOFTESTING-1.png" alt="Cliente 5" class="w-full h-full object-cover">
+                </div>
+              <h4 class="text-white text-2xl font-semibold">Softesting</h4>
+              <p class="text-white/70 text-sm mt-2">Empresa corporativa</p>
+            </div>
+
+            
+            <div class="w-full flex-shrink-0 flex flex-col items-center justify-center">
+              <div class="flex items-center justify-center mb-6 overflow-hidden ">
+                <img src="https://auteco.vtexassets.com/assets/vtex.file-manager-graphql/images/6a48e91c-be54-415a-b41d-46ecdb858cf4___bda024290b256249ceeff10c6c8552c9.png" alt="Cliente 5" class="w-full h-full object-cover">
+                </div>
+              <h4 class="text-white text-2xl font-semibold">Auteco</h4>
+              <p class="text-white/70 text-sm mt-2">Empresa corporativa</p>
+            </div>
+
+             <div class="w-full flex-shrink-0 flex flex-col items-center justify-center">
+              <div class="flex items-center justify-center mb-6 overflow-hidden ">
+                <img src="https://prodcdnmobisoft.oxxodomicilios.com/app/assets/images/oxxo-logo@3x.png" alt="Cliente 5" class="w-full h-full object-cover">
+                </div>
+              <h4 class="text-white text-2xl font-semibold">OXXO</h4>
+              <p class="text-white/70 text-sm mt-2">Cadena de supermercados</p>
+            </div>
+
+                <div class="w-full flex-shrink-0 flex flex-col items-center justify-center">
+              <div class="flex items-center justify-center mb-6 overflow-hidden ">
+                <img src="https://unicentrobogota.com/wp-content/uploads/2023/10/panamericana.png" alt="Cliente 5" class="w-full h-full object-cover">
+                </div>
+              <h4 class="text-white text-2xl font-semibold">Panamericana</h4>
+              <p class="text-white/70 text-sm mt-2">Empresa corporativa / Libreria</p>
+            </div>
+
+            <div class="w-full flex-shrink-0 flex flex-col items-center justify-center">
+              <div class="flex items-center justify-center mb-6 overflow-hidden ">
+                <img src="./assets/5.svg" alt="Cliente 5" class="w-full h-full object-cover">
+                </div>
+              <h4 class="text-white text-2xl font-semibold">Atenea</h4>
+              <p class="text-white/70 text-sm mt-2">empresa de desarrollo de software </p>
+            </div>
+
+            <div class="w-full flex-shrink-0 flex flex-col items-center justify-center">
+              <div class="flex items-center justify-center mb-6 overflow-hidden ">
+                <img src="./assets/4.svg" alt="Cliente 5" class="w-full h-full object-cover">
+                </div>
+              <h4 class="text-white text-2xl font-semibold">Suragas</h4>
+              <p class="text-white/70 text-sm mt-2">Empresa Corporativa de Gas</p>
+            </div>
+
+            <div class="w-full flex-shrink-0 flex flex-col items-center justify-center">
+              <div class="flex items-center justify-center mb-6 overflow-hidden ">
+                <img src="./assets/3.svg" alt="Cliente 5" class="w-full h-full object-cover">
+                </div>
+              <h4 class="text-white text-2xl font-semibold">Isuzu</h4>
+              <p class="text-white/70 text-sm mt-2">Empresa Vehicular Corporativa</p>
+            </div>
+
+            <div class="w-full flex-shrink-0 flex flex-col items-center justify-center">
+              <div class="flex items-center justify-center mb-6 overflow-hidden ">
+                <img src="./assets/6.svg" alt="Cliente 5" class="w-full h-full object-cover">
+                </div>
+              <h4 class="text-white text-2xl font-semibold">El Ministerio Roka</h4>
+              <p class="text-white/70 text-sm mt-2">Iglesia</p>
+            </div>
+
+   
+
+          </div>
+
+          <div class="flex justify-center gap-3 mt-8">
+            <button class="client-indicator w-3 h-3 rounded-full bg-white transition-all"></button> 
+            <button class="client-indicator w-3 h-3 rounded-full bg-white/30 transition-all"></button> 
+            <button class="client-indicator w-3 h-3 rounded-full bg-white/30 transition-all"></button> 
+            <button class="client-indicator w-3 h-3 rounded-full bg-white/30 transition-all"></button> 
+             <button class="client-indicator w-3 h-3 rounded-full bg-white/30 transition-all"></button> 
+            <button class="client-indicator w-3 h-3 rounded-full bg-white/30 transition-all"></button> 
+            <button class="client-indicator w-3 h-3 rounded-full bg-white/30 transition-all"></button> 
+             <button class="client-indicator w-3 h-3 rounded-full bg-white/30 transition-all"></button> 
+            <button class="client-indicator w-3 h-3 rounded-full bg-white/30 transition-all"></button> 
+            <button class="client-indicator w-3 h-3 rounded-full bg-white/30 transition-all"></button> 
+             <button class="client-indicator w-3 h-3 rounded-full bg-white/30 transition-all"></button> 
+            <button class="client-indicator w-3 h-3 rounded-full bg-white/30 transition-all"></button> 
+            <button class="client-indicator w-3 h-3 rounded-full bg-white/30 transition-all"></button> 
+            <button class="client-indicator w-3 h-3 rounded-full bg-white/30 transition-all"></button> 
+          </div>
+        </div>
+      </div>
+      </div>
    </section>
 
    <section id="contacto" class="relative py-20 px-4">
@@ -286,14 +438,13 @@ tailwind.config = {
             <option value="Limpieza Doméstica">Limpieza Doméstica</option> 
             <option value="Limpieza Corporativa">Limpieza Corporativa</option> 
             <option value="Limpieza Pre y post mundanza">Limpieza Pre y post mudanza</option> 
-            <option value="Limpieza Vehicular">Limpieza Vehicular</option>  
            </select>
           </div>
           <div>
            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Mensaje</label> 
            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#64A0A0] focus:ring-2 focus:ring-[#64A0A0]/20 outline-none transition-all resize-none" placeholder="Cuéntanos más sobre lo que necesitas..."></textarea>
           </div>
-          <button type="submit" class="w-full btn-primary text-white py-4 rounded-xl font-bold text-lg hover:scale-[1.02] transition-transform"> Enviar Solicitud </button>
+          <button type="submit" class="w-full bg-[#103838] hover:bg-[#64A0A0] text-white py-4 rounded-xl font-bold text-lg hover:scale-[1.02] transition-transform"> Enviar Solicitud </button>
          </form>
 
          <div id="success-message" class="hidden text-center py-8 h-full flex flex-col justify-center items-center">
@@ -307,8 +458,7 @@ tailwind.config = {
 
         <div class="w-full h-[350px] lg:h-auto min-h-[350px] rounded-2xl overflow-hidden shadow-inner border-4 border-gray-50 relative group">
          <div class="absolute inset-0 bg-[#64A0A0]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10"></div>
-         
-         <iframe style="color: aqua;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.345340683176!2d-74.07590432432377!3d4.709937941575955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f852bba0ad2e3%3A0x4625fab15106ecfe!2sCl.%20126%20%2353a%2077%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1773336200129!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.345340683176!2d-74.07590432432377!3d4.709937941575955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f852bba0ad2e3%3A0x4625fab15106ecfe!2sCl.%20126%20%2353a%2077%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1773336200129!5m2!1ses!2sco" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
       </div>
@@ -339,8 +489,8 @@ tailwind.config = {
       </div>
       <div class="flex flex-col items-start">
        <h4 class="text-white font-bold mb-4">WhatsApp</h4>
-       <a href="https://wa.me/573103224962" target="_blank" rel="noopener noreferrer" class="mb-3 inline-flex items-center gap-2 bg-white/20 backdrop-bl hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-semibold"> 3103224962 </a>
-       <a href="https://wa.me/573008335323" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white/20 backdrop-bl hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-semibold"> 3008335323 </a>
+       <a href="https://wa.me/573103224962" target="_blank" rel="noopener noreferrer" class="mb-3 inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-semibold"> 3103224962 </a>
+       <a href="https://wa.me/573008335323" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-semibold"> 3008335323 </a>
       </div>
       
       <div>
@@ -356,19 +506,7 @@ tailwind.config = {
   </div>
   
   <script>
-    // Configuración y variables del carrusel
-    const defaultConfig = {
-      hero_title: 'Limpieza Impecable para tu <span class="text-[#A0CDC8]">Hogar y Vehículo</span>',
-      hero_subtitle: 'Transformamos espacios con servicios de aseo domiciliario y vehicular de alta calidad. Tu satisfacción es nuestra prioridad.',
-      services_title: 'Nuestros Servicios',
-      cta_button: 'Contáctanos Ahora',
-      background_color: '#103838',
-      surface_color: '#64A0A0',
-      text_color: '#ffffff',
-      primary_action: '#64A0A0',
-      secondary_action: '#A0CDC8'
-    };
-    
+    // ===== CARRUSEL ORIGINAL DE SERVICIOS =====
     let currentSlide = 0;
     const totalSlides = 2;
     const track = document.getElementById('carousel-track');
@@ -410,8 +548,49 @@ tailwind.config = {
     carouselContainer.addEventListener('mouseleave', () => {
       autoPlay = setInterval(nextSlide, 5000);
     });
+
+    // ===== NUEVO CARRUSEL DE CLIENTES =====
+    let clientCurrentSlide = 0;
+    const totalClientSlides = 14;
+    const clientsTrack = document.getElementById('clients-track');
+    const clientIndicators = document.querySelectorAll('.client-indicator');
+
+    function updateClientCarousel() {
+      clientsTrack.style.transform = `translateX(-${clientCurrentSlide * 100}%)`;
+      clientIndicators.forEach((ind, index) => {
+        if (index === clientCurrentSlide) {
+          ind.classList.remove('bg-white/30');
+          ind.classList.add('bg-white');
+        } else {
+          ind.classList.remove('bg-white');
+          ind.classList.add('bg-white/30');
+        }
+      });
+    }
+
+    function nextClientSlide() {
+      clientCurrentSlide = (clientCurrentSlide + 1) % totalClientSlides;
+      updateClientCarousel();
+    }
+
+    // Rotación automática cada 3.5 segundos
+    let clientAutoPlay = setInterval(nextClientSlide, 3500);
+
+    // Pausar si el usuario pone el mouse encima
+    const clientsContainer = document.getElementById('clients-container');
+    clientsContainer.addEventListener('mouseenter', () => clearInterval(clientAutoPlay));
+    clientsContainer.addEventListener('mouseleave', () => {
+      clientAutoPlay = setInterval(nextClientSlide, 3500);
+    });
+
+    clientIndicators.forEach((ind, index) => {
+      ind.addEventListener('click', () => {
+        clientCurrentSlide = index;
+        updateClientCarousel();
+      });
+    });
     
-    // Formulario de Contacto
+    // ===== FORMULARIO DE CONTACTO =====
     const contactForm = document.getElementById('contact-form');
     const successMessage = document.getElementById('success-message');
     
@@ -438,12 +617,11 @@ tailwind.config = {
       }, 3000);
     });
 
-    // Smooth scroll para anclas
+    // ===== SCROLL SUAVE =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
         
-        // Si se hace clic en un link del menú móvil, cerrar el menú
         if(!mobileMenu.classList.contains("hidden")){
             mobileMenu.classList.add("hidden");
         }
@@ -460,7 +638,7 @@ tailwind.config = {
       document.getElementById("promoPopup").style.display = "none";
     }
 
-    // Menú móvil
+    // ===== MENÚ MÓVIL =====
     const mobileBtn = document.getElementById("mobile-menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
 
